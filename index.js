@@ -35,6 +35,7 @@ const urlSchema = new mongoose.Schema({
 });
 
 var Url = mongoose.model('Url', urlSchema);
+var base_url = "https://short-url-api-5fwd.onrender.com/";
 
 getRandomString = async () => {
     const len = Math.floor(Math.random() * 7 + 3);
@@ -68,7 +69,7 @@ app.get('/create', async (req, res) => {
         return
     }
 
-    res.json({url : "localhost/" + alias})
+    res.json({ url: base_url + alias });
 })
 
 app.get('/visits/:id', async (req, res) => {
