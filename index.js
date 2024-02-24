@@ -88,4 +88,6 @@ app.get('/:id', async (req, res) => {
 })
 
 const port = 80;
-app.listen(port)
+app.listen(port, () => {
+    console.log("Server Running at port 80")
+})
