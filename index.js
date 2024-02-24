@@ -1,8 +1,9 @@
 express = require('express')
 mongoose = require('mongoose')
+cors = require('cors')
 
 const app = express()
-
+app.use(cors())
 const connection_string =
   "mongodb+srv://akash03rai:EOv4hguHcH28MOhT@cluster0.mkponft.mongodb.net/";
 
